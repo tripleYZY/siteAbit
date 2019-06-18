@@ -1,3 +1,21 @@
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover,
+a:visited {
+  outline-width: 0;
+  text-decoration: none;
+}
+
+#map {
+    display: flex;
+    height:200px; 
+    width:200px;
+    padding: 100px;
+}
+
 .head {
 	border-bottom: 2px solid #183884;
 }
@@ -11,6 +29,15 @@
 	border-bottom: 2px solid #183884;
 	font-size: 72px;
 	text-align: center;
+    margin-bottom: 15px;
+}
+
+.row_vertical {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 5;
+    flex-flow: row wrap;
 }
 
 
@@ -36,6 +63,7 @@
     transition: all .2s ease-in-out;
     height: 100px;
     border-radius: 75px;
+
 }
 
 .b_number {
@@ -84,16 +112,43 @@
 	border: 1.25px solid #183884;
 }
 
+.list_a
+{
+    border: 1.25px solid #183884;
+
+}
+
+.list_a1
+{
+    border: 1.25px solid #183884;
+
+}
+
 .list_b
 {
 	border-right: 1.25px solid #183884;
+    text-align: center;
+}
+
+.list_b1
+{
+    text-align: center;
+}
+
+.outline {
+    outline: 1.25px solid #183884;
+    padding: 10%;
 }
 
 .vr 
 {
 	display: inline-block;
-	border-top: none;
+	border: none;
 	text-align: center;
+}
+
+.vr_pad {
+
 }
 
 .vr_center {
@@ -101,6 +156,65 @@
 	display: inline-block;
 }
 
+.non_line:hover {
+    text-decoration: none;
+}
+
+.img_vr {
+    font-size: 75px;
+    color: red;
+}
+
+.progs {
+    position: relative;
+
+    border: 1.25px solid #183884;
+    padding: 10px;
+    margin: 0 auto 15px;
+    border-radius: 100px; 
+    display: inline-block;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: center;
+    clear:both;
+}
+
+.budget {
+    
+
+    border: 1.25px solid #183884;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 100px; 
+    display: inline-block;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: center;
+    clear:both;
+}
+
+
+.sales {
+
+    border: 1.25px solid #183884;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 100px; 
+    display: inline-block;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: center;
+    clear:both;
+}
 /* .b-button {
 	border-radius: 100px;
 	border: 1px solid #183884;
