@@ -9,15 +9,53 @@ a:visited {
   text-decoration: none;
 }
 
+@media (max-width: 320px) {
+    h1, h2{
+        font-size: 100%
+    }
+}
+
+
 #map {
-    display: flex;
-    height:200px; 
-    width:200px;
-    padding: 100px;
+    height: 300px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
 }
 
 .head {
 	border-bottom: 2px solid #183884;
+}
+
+
+.vr_img {
+    background:  url(vr.jpg);
+    display: inline-block;
+    position: relative;
+    padding-left: 0px;
+    height: 128px;
+    width: 100%;
+}
+
+.vr_img span {
+    display: inline-block;
+    position: absolute;
+    left: 100px;
+    top: 0px;
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 40px;
+ /*  background-color: rgba(0,0,0,4); !!!!!!FON
+    padding: 10px 30px; */ 
+}
+
+
+
+.vr_text {
+    padding: 0px;
+    display:inline-block;
+    position:relative;
 }
 
 .f_block {
@@ -126,7 +164,6 @@ a:visited {
 
 .list_b
 {
-	border-right: 1.25px solid #183884;
     text-align: center;
 }
 
@@ -147,8 +184,43 @@ a:visited {
 	text-align: center;
 }
 
-.vr_pad {
+.footer {
+    background-color: #183884;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
 
+.footer i {
+    color: #fff;
+    padding: 25px 10px 25px;
+    font-size: 50px;
+}
+
+.footer span {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@media (max-width: 320px){
+    .vr_text span{
+        font-size: 1em;
+        text-align: center !important;
+        align-items: center !important;
+    }
+}
+
+.mg_r {
+    padding-right: -15px !important;
 }
 
 .vr_center {
@@ -163,6 +235,11 @@ a:visited {
 .img_vr {
     font-size: 75px;
     color: red;
+}
+
+.cont_inf {
+    font-family: sans-serif;
+    font-size: 28px;
 }
 
 .progs {

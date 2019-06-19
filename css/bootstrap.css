@@ -353,6 +353,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: .5rem;
+  text-align: center;
+  color: #183884 !important;
 }
 
 p {
@@ -868,33 +870,6 @@ pre code {
   margin-left: -15px;
 }
 
-@media (min-width: 576px) {
-  .row {
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-}
-
-@media (min-width: 768px) {
-  .row {
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-}
-
-@media (min-width: 992px) {
-  .row {
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .row {
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-}
 
 .no-gutters {
   margin-right: 0;
@@ -914,6 +889,40 @@ pre code {
   padding-right: 15px;
   padding-left: 15px;
 }
+
+.flexbox {
+  clear: both;
+  margin: 0; }
+  .flexbox .row {
+    clear: both;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    width: auto; }
+    @media screen and (max-width: 767px) {
+      .flexbox .row {
+        display: block; } }
+    .flexbox .row > div {
+      display: -webkit-box;
+      display: flex; }
+    .flexbox .row:before {
+      width: 0; }
+  .flexbox .col-inner {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 25px; }
+    @media screen and (max-width: 991px) {
+      .flexbox .col-inner {
+        margin-bottom: 15px; } }
+  .flexbox h3 {
+    font-size: 22px;
+    line-height: 1; }
+  .flexbox h3, .flexbox p {
+    margin-bottom: 15px; }
 
 @media (min-width: 320px) {
   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
@@ -4472,7 +4481,7 @@ tbody.collapse.show {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
 
-.card-footer {
+.card-f {
   padding: 0.75rem 1.25rem;
   background-color: #f7f7f9;
   border-top: 1px solid rgba(0, 0, 0, 0.125);
