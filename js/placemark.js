@@ -5,7 +5,6 @@ function init() {
             center: [54.7232153, 55.9483825],
             zoom: 17
         }, {
-            searchControlProvider: 'yandex#search'
         });
 
     myMap.geoObjects
