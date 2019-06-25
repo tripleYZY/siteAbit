@@ -24,7 +24,7 @@
   					<div class="row">
 		  				<div class="col-12 col-md-6 head_text">
 							<a href="https://bspu.ru/" class="btn btn-white-outline ">
-								<i class="fa fa-university"></i> 
+								<i class="fa fa-university"></i>
 								 Официальный сайт БГПУ им. М.Акмуллы
 							</a>
 						</div>
@@ -40,7 +40,7 @@
 				<div class="col-12 logo">
 					<a href="#" class="dec_none">
 						<span class="header-block__title logo_txt">
-							<img src="bspu.png" class="logo_p"> 
+							<img src="bspu.png" class="logo_p">
 							Приёмная комиссия БГПУ им. М.Акмуллы
 						</span>
 					</a>
@@ -50,32 +50,48 @@
 	</header>
 
 
-		<div class="col-md-12">
 
-			<a href="#">
-			<div class="row row_priem">
-				
-				<div class="col-md-12 bg-gray priem">
-					<span class="">ХОД ПРИЁМА 2019</span>
+
+<div class="container">
+			<div class="col-md-12 " style="padding: 0 !important">
+				<div class="row list cent">
+
+							<div class="col-md-12 yay"  style="margin-top: 25px; margin-bottom: 25px; border: 1.25px solid #183884; padding: 0px !important">
+
+					<a href="#">
+
+				<div class="">
+				<div class="col-md-12 yaycol" style="">
+				<div class="center">
+					
+						<span>ХОД ПРИЕМА 2019</span>
+					</div>
 				</div>
 			</div>
-			</a>
+
 		</div>
-
-<div class="container">			
-			<div class="col-md-12" style="padding: 0 !important"> 
-				<div class="row list cent">
-					
+				</a>
 					<div class="col-12 col-md-4 bg-gray bor_b">
-						<span>130 образовательный программ</span>
+						<span id="lines">0</span><span> образовательных программ</span>
 					</div>
 
 					<div class="col-12 col-md-4 bg-gray bor_l1 bor_b">
-						<span>1699 бюджетных мест</span>
+						<span id="lines2">0</span><span> бюджетных мест</span>
 					</div>
 
 					<div class="col-12 col-md-4 bg-gray bor_l1 bor_b">
-						<span>до 50% скидки на платное обучение</span>
+						<span>до
+              <div class="loader-container">
+                <div class="loader">
+                  <span>0%</span>
+                  <span>10%</span>
+                  <span>20%</span>
+                  <span>30%</span>
+                  <span>40%</span>
+                  <span>50%</span>
+                </div>
+              </div>
+               скидки на платное обучение</span>
 					</div>
 
 				</div>
@@ -119,7 +135,7 @@
 				</section>
 
 					<section class="vr_pad">  <!-- блок 3 -->
-							
+
 						<div class="row">
 							<div class="col-5 col-md-5 vr_center ">
 								<div class="row bg-gray">
@@ -141,7 +157,7 @@
 										</div>
 									</div>
 									<div class="col-6 col-md-6  outline">
-										<div class="vr_center">   
+										<div class="vr_center">
 											<span>ИИПО</span>
 										</div>
 									</div>
@@ -169,7 +185,7 @@
 										</div>
 									</div>
 									<div class="col-6 col-md-6 outline">
-										<div class="vr_center">   
+										<div class="vr_center">
 											<span>ИИПО</span>
 										</div>
 									</div>
@@ -183,7 +199,7 @@
 
 					<section>
 						<div class="row">
-							
+
 								<div class="col-md-12 inf">
 
 										<span>Контактная ифнормация</span>
@@ -213,7 +229,7 @@
 					</section>
 
 					<section>
-						
+
 					<div class="row">
 						<div class="col-sm-6 inf">
 							<span>1 блок</span>
@@ -237,7 +253,7 @@
 					</section>
 
 					<section>
-						
+
 					<div class="row">
 						<div class="col-sm-6 inf">
 							<span>2</span>
@@ -255,9 +271,9 @@
 					</section>
 
 					</div>
-					</div> 
+					</div>
 				</div>
-				
+
 					<!-- конец контейнера -->
 
 <!-- правая граница -->
@@ -289,5 +305,37 @@
     <script src="js/scripts.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c3514a36-1e6e-4173-abe4-71fa1262c757" type="text/javascript"></script>
     <script src="js/placemark.js" type="text/javascript"></script>
+
+    <!-- jquery animation -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+
+    <script src="scripts/jquery.animateNumber.min.js"></script>
+
+    <script>
+    $('#lines')
+  .prop('number', 0)
+  .animateNumber(
+    {
+      number: 130
+    },
+    3000
+  );
+    </script>
+
+    <script>
+    $('#lines2')
+  .prop('number', 0)
+  .animateNumber(
+    {
+      number: 1699
+    },
+    5000
+  );
+    </script>
+
   </body>
 </html>

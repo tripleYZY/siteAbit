@@ -96,7 +96,7 @@ a:visited {
 
 .logo_p
     {
-        height: 30px; 
+        height: 30px;
         width: 30px;
         justify-content: center;
         margin-right: 10px;
@@ -126,7 +126,7 @@ a:visited {
         padding-right: 0 !important;
     }
 
-.logo_txt  
+.logo_txt
     {
         font-size: 1em !important;
     }
@@ -156,7 +156,7 @@ a:visited {
 
 @media (min-width: 768px) {
 
-.logo_txt 
+.logo_txt
     {
         font-size: 2em !important;
     }
@@ -169,7 +169,7 @@ a:visited {
 
 @media (min-width: 992px) {
 
-.logo_txt 
+.logo_txt
     {
         font-size: 2.5em !important;
     }
@@ -234,6 +234,107 @@ a:visited {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.center {
+  text-align: center;
+  padding: 10px;
+}
+
+.yay {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+.yay:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #183884;
+  color: #000;
+  z-index: -1;
+  content: '';
+}
+.yay a:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #183884;
+  color: #fff !important;
+  z-index: -1;
+  content: '';
+}
+
+.yay a {
+  color: #183884 !important;
+
+}
+
+.yay .yaycol:hover {
+    color:#fff !important;
+    transition-delay: 0.35s;
+    animation-fill-mode: forwards;
+}
+
+.yay:hover::before {
+  animation: bg-animation 0.6s ease-in 1;
+  animation-fill-mode: forwards;
+  color: #fff;
+}
+.yay a:hover::before {
+  animation: bg-animation 0.6s ease-in 1;
+  animation-fill-mode: forwards;
+  color: #fff;
+}
+
+@-webkit-keyframes bg-animation {
+  0% {
+    -webkit-width: 10%;
+  }
+  100% {
+    -webkit-width: 100%;
+  }
+}
+
+@keyframes bg-animation {
+  0% {
+    width: 10%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.loader-container {
+  margin-left: 40%;
+  width: 80px;
+  height: 50px;
+  font-size: 25px;
+  line-height: 50px;
+  overflow: hidden;
+  text-align: center;
+}
+
+@-webkit-keyframes load {
+  100% {
+    -webkit-transform: translateY(-250px);
+  }
+}
+
+@keyframes load {
+  100% {
+    transform: translateY(-250px);
+  }
+}
+
+.loader {
+  animation-name: load;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
 }
 
 .btn-white-outline {
@@ -316,7 +417,7 @@ a:visited {
     font-family: sans-serif;
     font-size: 35px;
  /*  background-color: rgba(0,0,0,4); !!!!!!FON
-    padding: 10px 30px; */ 
+    padding: 10px 30px; */
 }
 
 
@@ -395,7 +496,7 @@ a:visited {
 .fixed_button{
   position: fixed; /*задаём тип позиции, в нашем случае - фиксированная*/
   bottom: 0px;      /* отступ сверху*/
-  right: 50px;       /* отступ слева*/
+  right: 2px;       /* отступ слева*/
   width: auto;    /* ширина кнопки*/
   height: auto;    /* высота кнопки*/
   z-index: 999;    /*позиция относительно дальности*/
@@ -548,11 +649,11 @@ a:visited {
 
 .cent {
     text-align: center;
-    display: flex !important;   
+    display: flex !important;
     margin-bottom: 25px !important;
 }
 
-.vr 
+.vr
 {
 	display: inline-block;
 	border: none;
@@ -632,4 +733,3 @@ a:visited {
 	border: 1px solid #183884;
 	padding: 50px;
 } */
-
