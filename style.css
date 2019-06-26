@@ -1,6 +1,7 @@
 a {
   background-color: transparent;
   text-decoration: none;
+  line-height: 1.5 !important;
 }
 
 a:hover,
@@ -96,8 +97,8 @@ a:visited {
 
 .logo_p
     {
-        height: 30px;
-        width: 30px;
+        height: 60px; 
+        width: 60px;
         justify-content: center;
         margin-right: 10px;
         margin-left: 10px;
@@ -126,7 +127,7 @@ a:visited {
         padding-right: 0 !important;
     }
 
-.logo_txt
+.logo_txt  
     {
         font-size: 1em !important;
     }
@@ -156,7 +157,7 @@ a:visited {
 
 @media (min-width: 768px) {
 
-.logo_txt
+.logo_txt 
     {
         font-size: 2em !important;
     }
@@ -169,7 +170,7 @@ a:visited {
 
 @media (min-width: 992px) {
 
-.logo_txt
+.logo_txt 
     {
         font-size: 2.5em !important;
     }
@@ -234,107 +235,6 @@ a:visited {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-.center {
-  text-align: center;
-  padding: 10px;
-}
-
-.yay {
-  position: relative;
-  display: inline-block;
-  padding: 10px;
-}
-.yay:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 100%;
-  background: #183884;
-  color: #000;
-  z-index: -1;
-  content: '';
-}
-.yay a:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 100%;
-  background: #183884;
-  color: #fff !important;
-  z-index: -1;
-  content: '';
-}
-
-.yay a {
-  color: #183884 !important;
-
-}
-
-.yay .yaycol:hover {
-    color:#fff !important;
-    transition-delay: 0.35s;
-    animation-fill-mode: forwards;
-}
-
-.yay:hover::before {
-  animation: bg-animation 0.6s ease-in 1;
-  animation-fill-mode: forwards;
-  color: #fff;
-}
-.yay a:hover::before {
-  animation: bg-animation 0.6s ease-in 1;
-  animation-fill-mode: forwards;
-  color: #fff;
-}
-
-@-webkit-keyframes bg-animation {
-  0% {
-    -webkit-width: 10%;
-  }
-  100% {
-    -webkit-width: 100%;
-  }
-}
-
-@keyframes bg-animation {
-  0% {
-    width: 10%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-.loader-container {
-  margin-left: 40%;
-  width: 80px;
-  height: 50px;
-  font-size: 25px;
-  line-height: 50px;
-  overflow: hidden;
-  text-align: center;
-}
-
-@-webkit-keyframes load {
-  100% {
-    -webkit-transform: translateY(-250px);
-  }
-}
-
-@keyframes load {
-  100% {
-    transform: translateY(-250px);
-  }
-}
-
-.loader {
-  animation-name: load;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
 }
 
 .btn-white-outline {
@@ -417,7 +317,7 @@ a:visited {
     font-family: sans-serif;
     font-size: 35px;
  /*  background-color: rgba(0,0,0,4); !!!!!!FON
-    padding: 10px 30px; */
+    padding: 10px 30px; */ 
 }
 
 
@@ -496,7 +396,7 @@ a:visited {
 .fixed_button{
   position: fixed; /*задаём тип позиции, в нашем случае - фиксированная*/
   bottom: 0px;      /* отступ сверху*/
-  right: 2px;       /* отступ слева*/
+  right: 50px;       /* отступ слева*/
   width: auto;    /* ширина кнопки*/
   height: auto;    /* высота кнопки*/
   z-index: 999;    /*позиция относительно дальности*/
@@ -649,11 +549,11 @@ a:visited {
 
 .cent {
     text-align: center;
-    display: flex !important;
+    display: flex !important;   
     margin-bottom: 25px !important;
 }
 
-.vr
+.vr 
 {
 	display: inline-block;
 	border: none;
@@ -728,8 +628,285 @@ a:visited {
     color: red;
 }
 
-/* .b-button {
-	border-radius: 100px;
-	border: 1px solid #183884;
-	padding: 50px;
+.reg {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: !important;
+
+}
+
+.reg_text {
+    padding: 7px;
+    background-color: #25e838;  
+    border: 1.25px solid #11af21;
+    border-style: dashed;
+    margin: 15px 0;
+    border-radius: 15px;
+    font-variant: all-petite-caps;
+    font-weight: 600;
+    color: white;
+}
+
+.myprofile span {
+    width: 250px;
+}
+
+.mysurname,
+.myname,
+.mypatronymic,
+.mydate,
+.myphnumber,
+.myemail,
+.mylogin {
+    padding: 7px; 
+    border: 1.25px solid #11af21;
+    margin: 7px 0;
+    font-variant: all-petite-caps;
+    font-weight: 600;
+    text-align: left;
+}
+
+.mysurname2,
+.myname2,
+.mypatronymic2,
+.mydate2,
+.myphnumber2,
+.myemail2,
+.mylogin2 {
+    padding: 7px; 
+    margin: 7px 0;
+    font-variant: all-petite-caps;
+    font-weight: 600;
+    text-align: left;
+}
+
+.mymarg {
+    margin: 15px;
+}
+
+.padt {
+    margin-bottom: -1px;
+}
+
+.login {
+    margin-top: 0px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding-top: 0px;
+}
+
+.center {
+  text-align: center;
+  padding: 10px;
+}
+
+.yay {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+.yay:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #183884;
+  color: #000;
+  z-index: -1;
+  content: '';
+}
+.yay a:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #183884;
+  color: #fff !important;
+  z-index: -1;
+  content: '';
+}
+
+.yay a {
+  color: #183884 !important;
+
+}
+
+.yay .yaycol:hover {
+    color:#fff !important;
+    transition-delay: 0.35s;
+    animation-fill-mode: forwards;
+}
+
+.yay:hover::before {
+  animation: bg-animation 0.6s ease-in 1;
+  animation-fill-mode: forwards;
+  color: #fff;
+}
+.yay a:hover::before {
+  animation: bg-animation 0.6s ease-in 1;
+  animation-fill-mode: forwards;
+  color: #fff;
+}
+
+@-webkit-keyframes bg-animation {
+  0% {
+    -webkit-width: 10%;
+  }
+  100% {
+    -webkit-width: 100%;
+  }
+}
+
+@keyframes bg-animation {
+  0% {
+    width: 10%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.loader-container {
+  margin-left: 40%;
+  width: 80px;
+  height: 50px;
+  font-size: 25px;
+  line-height: 50px;
+  overflow: hidden;
+  text-align: center;
+}
+
+@-webkit-keyframes load {
+  100% {
+    -webkit-transform: translateY(-250px);
+  }
+}
+
+@keyframes load {
+  100% {
+    transform: translateY(-250px);
+  }
+}
+
+.loader {
+  animation-name: load;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+
+/*
+label, input {
+    width: 70% !important;
+    display: block !important;
+    padding: 5px !important;
+    margin: 0 0 0 20px !important;
 } */
+.buttonlog {
+    width: 40% !important;
+    padding: 5px !important;
+    background: #fff !important;
+    border: 2px solid #4CAF50 !important;
+    background: #fff !important;
+
+}
+.buttonlog:hover {
+    background: #4CAF50 !important;
+    color: #fff !important;
+    transition: ease-in-out 0.5s;
+}
+
+.preloader {
+    align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: white;
+  position: fixed;
+  z-index: 1000;
+  transition: 0.7s all;
+  opacity: 1;
+  visibility: visible;
+}
+
+#cube-loader {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: white;
+  position: fixed;
+}
+
+.done {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#cube-loader .caption {
+  margin: 0 auto;
+}
+#cube-loader .cube-loader {
+  width: 73px;
+  height: 73px;
+  margin: 0 auto;
+  margin-top: 49px;
+  position: relative;
+  transform: rotateZ(45deg);
+}
+#cube-loader .cube-loader .cube {
+  position: relative;
+  transform: rotateZ(45deg);
+  width: 50%;
+  height: 50%;
+  float: left;
+  transform: scale(1.1);
+}
+#cube-loader .cube-loader .cube:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #34495e;
+  animation: cube-loader 2.76s infinite linear both;
+  transform-origin: 100% 100%;
+}
+#cube-loader .cube-loader .loader-2 {
+  transform: scale(1.1) rotateZ(90deg);
+}
+#cube-loader .cube-loader .loader-3 {
+  transform: scale(1.1) rotateZ(180deg);
+}
+#cube-loader .cube-loader .loader-4 {
+  transform: scale(1.1) rotateZ(270deg);
+}
+#cube-loader .cube-loader .loader-2:before {
+  animation-delay: 0.35s;
+}
+#cube-loader .cube-loader .loader-3:before {
+  animation-delay: 0.69s;
+}
+#cube-loader .cube-loader .loader-4:before {
+  animation-delay: 1.04s;
+}
+
+
+@keyframes cube-loader {
+  0%, 10% {
+    transform: perspective(136px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%, 75% {
+    transform: perspective(136px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%, 100% {
+    transform: perspective(136px) rotateY(180deg);
+    opacity: 0;
+  }
+}

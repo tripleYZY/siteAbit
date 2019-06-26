@@ -1,59 +1,52 @@
 <?php
-session_start();
-$logout = '/index.php?logout=true';
-if (isset($_REQUEST['logout'])){
-	unset($_COOKIE['user_id'], $_COOKIE['username'], $_COOKIE['password']);
-	session_destroy();
-} 
-
 header('Content-type: text/html; charset=utf-8');
-$link = mysqli_connect('localhost', 'root', '', 'test_abit');
-if(!isset($_COOKIE['user_id'])) {
-	if(isset($_POST['submit'])) {
-		$user_username = mysqli_real_escape_string($link, trim($_POST['username']));
-		$user_password = mysqli_real_escape_string($link, trim($_POST['password']));
-		if(!empty($user_username) && !empty($user_password)) {
-			$query = "SELECT `user_id` , `username` FROM `signup` WHERE username = '$user_username' AND password = SHA('$user_password')";
-			$data = mysqli_query($link,$query);
-			if(mysqli_num_rows($data) == 1) {
-				$row = mysqli_fetch_assoc($data);
-
-			$_SESSION['user_id']=$row['user_id'];
-				setcookie('user_id', $row['user_id'], time() + (60*60*24*30));
-				setcookie('username', $row['username'], time() + (60*60*24*30));
-				$home_url = 'http://' . $_SERVER['HTTP_HOST'];
-				header('Location: '. $home_url);
-			}
-			else {
-				echo 'Неверное имя пользователя или пароль';
-			}
+$link = mysqli_connect('localhost', 'root', '', 'test_abit') OR DIE('Ошибка подключения к базе данных');
+if(isset($_POST['submit'])){
+	$name = mysqli_real_escape_string($link, trim($_POST['name']));
+	$surname = mysqli_real_escape_string($link, trim($_POST['surname']));
+	$patronymic = mysqli_real_escape_string($link, trim($_POST['patronymic']));
+	$date = mysqli_real_escape_string($link, trim($_POST['date']));
+	$phnumber = mysqli_real_escape_string($link, trim($_POST['phnumber']));
+	$email = mysqli_real_escape_string($link, trim($_POST['email']));
+	$username = mysqli_real_escape_string($link, trim($_POST['username']));
+	$password1 = mysqli_real_escape_string($link, trim($_POST['password1']));
+	$password2 = mysqli_real_escape_string($link, trim($_POST['password2']));
+	if(!empty($name) && !empty($surname) && !empty($patronymic) && !empty($date) && !empty($phnumber) && !empty($email) && !empty($username) && !empty($password1) && !empty($password2) && ($password1 == $password2)) {
+		$query = "SELECT * FROM `signup` WHERE username = '$username'";
+		$data = mysqli_query($link, $query);
+		if(mysqli_num_rows($data) == 0) {  /*проверка на наличие логина, проверяет совпадения в строках БД*/
+			$query ="INSERT INTO `signup` (name,surname,patronymic,`date`,phnumber,email,username, password) VALUES ('$name','$surname','$patronymic','$date','$phnumber','$email','$username', SHA('$password2'))"; /*SHA('$pas') - шифровка пароля*/
+			mysqli_query($link,$query);
+			header('Location: /index.php?reg=ok');
+			mysqli_close($link);
+			exit();
+			
 		}
 		else {
-			echo 'Заполните поля правильно';
+			echo 'Такой логин уже существует!';
 		}
+
 	}
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-  <?php 
-  		include 'head.php';
-   ?>
-  <body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
 
-  	<div id="page-preloader" class="preloader">
-	<div id="cube-loader">
-    <div class="caption">
-      <div class="cube-loader">
-        <div class="cube loader-1"></div>
-        <div class="cube loader-2"></div>
-        <div class="cube loader-4"></div>
-        <div class="cube loader-3"></div>
-      </div>
-    </div>
-  </div>
-</div>
+    <title>Страница для абитуриентов</title>
+
+
+   <link href="css/bootstrap.css" rel="stylesheet">
+   <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+  </head>
+  <body>
 
   	<header class="head">
   		<div class="header">
@@ -66,97 +59,88 @@ if(!isset($_COOKIE['user_id'])) {
 								 Официальный сайт БГПУ им. М.Акмуллы
 							</a>
 						</div>
-
 						<div class="col-12 col-md-6 head_text flex btn_push">
 							<a href="#" class="btn">
 								Информационный ресурс для абитуриентов
 							</a>
 						</div>
-
 					</div>
 				</div>
 			</div>
 
-				<div class="col-12 logo logo_pad">
-					<a href="index.php" class="dec_none">
+				<div class="col-12 logo">
+					<a href="/index.php" class="dec_none">
 						<span class="header-block__title logo_txt">
 							<img src="bspu.png" class="logo_p"> 
 							Приёмная комиссия БГПУ им. М.Акмуллы
 						</span>
 					</a>
 				</div>
-
-				<div class="col-12 col-md-12 login">
-<?php
-	if(empty($_COOKIE['username'])) {
-?>
-	<a href="login.php"><button class="buttonlog">Вход</button></a><br>
-	<a href="signup.php">Регистрация</a>
-	</form>
-<?php
-}
-else {
-	?>
-	<p  class="padt"><a href="myprofile.php">Мой профиль</a></p>
-	<p><a href="exit.php">Выйти(<?php echo $_COOKIE['username']; ?>)</a></p>
-<?php	
-}
-?>
-</div>
-
 		</div>
+
 	</header>
 
-	<?php 
-		if(isset ($_REQUEST['reg'])) {
-			echo '<div class="col-md-12 reg"><span class="reg_text">Ваш аккаунт зарегестрирован</span>
-</div>';
-		}
-	 ?>
-	
 
-<div class="container">	
-		<div class="col-md-12 " style="padding: 0 !important">
-				<div class="row list cent">
-					<div class="col-md-12 yay"  style="margin-top: 25px; margin-bottom: 25px; border: 1.25px solid #183884; padding: 0px !important">
+<content>
+	<form method="POST">
+		<label for="surname">Фамилия:</label><br>
+		<input type="text" name="surname"><br>
 
-						<a href="#">
-				<div class="">
-					<div class="col-md-12 yaycol" style="">
-						<div class="center">
-					
-						<span>ХОД ПРИЕМА 2019</span>
-						</div>
-					</div>
+		<label for="name">Имя:</label><br>
+		<input type="text" name="name"><br>
+
+		<label for="patronymic">Отчество:</label><br>
+		<input type="text" name="patronymic"><br>
+
+		<label for="date">Дата рождения:</label><br>
+		<input type="date" name="date"><br>
+
+		<label for="phnumber">Номер телефона:</label><br>
+		<input type="text" name="phnumber"><br>
+
+		<label for="email">Электронная почта:</label><br>
+		<input type="text" name="email"><br>
+
+		<label for="username">Введите логин:</label><br>
+		<input type="text" name="username"><br>
+
+		<label for="password">Введите пароль:</label><br>
+		<input type="password" name="password1"><br>
+
+		<label for="password">Введите пароль ещё раз:</label><br>
+		<input type="password" name="password2"><br>
+
+		<button name="submit">Зарегестрироваться</button>
+	</form>
+</content>
+
+
+		<div class="col-md-12">
+
+			<a href="#">
+			<div class="row row_priem">
+				
+				<div class="col-md-12 bg-gray priem">
+					<span class="">ХОД ПРИЁМА 2019</span>
 				</div>
 			</div>
-				</a>
+			</a>
 		</div>
-		
+
+<div class="container">			
 			<div class="col-md-12" style="padding: 0 !important"> 
 				<div class="row list cent">
 					
 					<div class="col-12 col-md-4 bg-gray bor_b">
-						<span id="lines">0</span><span> образовательных программ</span>
+						<span>130 образовательный программ</span>
 					</div>
 
 					<div class="col-12 col-md-4 bg-gray bor_l1 bor_b">
-						<span id="lines2">0</span><span> бюджетных мест</span>
+						<span>1699 бюджетных мест</span>
 					</div>
 
 					<div class="col-12 col-md-4 bg-gray bor_l1 bor_b">
-						<span>до
-              <div class="loader-container">
-                <div class="loader">
-                  <span>0%</span>
-                  <span>10%</span>
-                  <span>20%</span>
-                  <span>30%</span>
-                  <span>40%</span>
-                  <span>50%</span>
-                </div>
-              </div>
-               скидки на платное обучение</span>
+						<span>до 50% скидки на платное обучение</span>
 					</div>
 
 				</div>
@@ -365,37 +349,10 @@ else {
 	</div>
 </div>
 
-	<script src="js/preloader.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c3514a36-1e6e-4173-abe4-71fa1262c757" type="text/javascript"></script>
     <script src="js/placemark.js" type="text/javascript"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script>
-    $('#lines')
-  .prop('number', 0)
-  .animateNumber(
-    {
-      number: 130
-    },
-    3000
-  );
-    </script>
-
-    <script>
-    $('#lines2')
-  .prop('number', 0)
-  .animateNumber(
-    {
-      number: 1699
-    },
-    5000
-  );
-    </script>
   </body>
 </html>
