@@ -87,24 +87,24 @@ if(!isset($_COOKIE['user_id'])) {
 				</div>
 
 				<div class="col-12 col-md-12 login">
+					
 <?php
 	if(empty($_COOKIE['username'])) {
 ?>
-	<a href="login.php"><button class="buttonlog">Вход</button></a><br>
-	<a href="signup.php">Регистрация</a>
-	</form>
+	<div><a href="login.php"><button class="buttonlog">Вход</button></a><br></div>
+	<div><a href="signup.php">Регистрация</a></div>
 <?php
 }
 else {
 	?>
-	<p  class="padt"><a href="myprofile.php">Мой профиль</a></p>
-	<p><a href="exit.php">Выйти(<?php echo $_COOKIE['username']; ?>)</a></p>
+	<div><p  class="padt"><a href="myprofile.php">Мой профиль</a></p></div>
+	<div><p><a href="exit.php">Выйти(<?php echo $_COOKIE['username']; ?>)</a></p><div>
 <?php	
 }
 ?>
 </div>
 
-		</div>
+		</div></div>
 	</header>
 
 	<?php 
@@ -117,13 +117,13 @@ else {
 
 <div class="container">	
 		<div class="col-md-12 " style="padding: 0 !important">
-				<div class="row list cent">
-					<div class="col-md-12 yay"  style="margin-top: 25px; margin-bottom: 25px; border: 1.25px solid #183884; padding: 0px !important">
+				<div class="row list cent ">
+					<div class="col-md-12 yay "  style="margin-top: 25px; margin-bottom: 25px; border: 1.25px solid #183884; padding: 0px !important">
 
 						<a href="#">
 				<div class="">
-					<div class="col-md-12 yaycol" style="">
-						<div class="center">
+					<div class="col-md-12 yaycol " style="">
+						<div class="center ">
 					
 						<span>ХОД ПРИЕМА 2019</span>
 						</div>
@@ -133,15 +133,15 @@ else {
 				</a>
 		</div>
 		
-			<div class="col-md-12" style="padding: 0 !important"> 
-				<div class="row list cent">
+			<div class="col-md-12 revealator-zoomin revealator-delay2 revealator-once" style="padding: 0 !important"> 
+				<div class="row list cent ">
 					
 					<div class="col-12 col-md-4 bg-gray bor_b">
-						<span id="lines">0</span><span> образовательных программ</span>
+						<span id="lines">0</span><span>&nbsp; образовательных программ</span>
 					</div>
 
 					<div class="col-12 col-md-4 bg-gray bor_l1 bor_b">
-						<span id="lines2">0</span><span> бюджетных мест</span>
+						<span id="lines2">0</span><span>&nbsp; бюджетных мест</span>
 					</div>
 
 					<div class="col-12 col-md-4 bg-gray bor_l1 bor_b">
@@ -169,27 +169,31 @@ else {
 						<!-- контейнер -->
 			<div class="col-md-12">
 
-				<section>	<!-- блок 2 -->
-					<div class="row list bg-gray list_b">
-						<div class="col-6 col-md-3 bor_b bor_r">
-							<span>Колледж</span>
-						</div>
-						<div class="col-6 col-md-3 bor_b bor_l">
+				<section class="revealator-zoomin revealator-delay2 revealator-once">	<!-- блок 2 -->
+					<div class="row list list_b">
+						<a href="#" class="col-6 col-md-3 bor_b bor_r bg-gray ptr acolor">
+							
+							<span>Колледж</span>	
+
+						</a>
+						<a href="#" class="col-6 col-md-3 bor_b bor_l bg-gray ptr acolor">
 							<span>Бакалавриат</span>
-						</div>
-						<div class="col-6 col-md-3 bor_b bor_r bor_l1">
+						</a>
+
+						<a href="#" class="col-6 col-md-3 bor_b bor_r bg-gray bor_l1 ptr acolor">
 							<span>Магистратура</span>
-						</div>
-						<div class="col-6 col-md-3 bor_b bor_l">
+						</a>
+
+						<a href="#" class="col-6 col-md-3 bor_b bor_l bg-gray ptr acolor">
 							<span>Аспирантура</span>
-						</div>
+						</a>
 					</div>
 
 				</section>
 
 
 <!-- #354d83 - фон   #233456 - буквы TEXT V VR -->
-				<section>
+				<section class="revealator-zoomin revealator-delay2 revealator-once">
 					<div class="row" style="padding-top: 10px">
 						<div class="vr_img">
 							<div class="col-md-12 vr_text">
@@ -203,57 +207,58 @@ else {
 							
 						<div class="row">
 							<div class="col-5 col-md-5 vr_center ">
-								<div class="row bg-gray">
-									<div class="col-6 col-md-6  outline">
-										<div class="vr_center">
+								<div class="row bg-gray ">
+									<a href="#" class="col-6 col-md-6 outline ptr acolor">
+										<div class="vr_center ">
 											<span class="">ИПОИТ</span>
 										</div>
-									</div>
-									<div class="col-6 col-md-6  outline">
+									</a>
+									<a href="#" class="col-6 col-md-6  outline ptr acolor">
 										<div class="vr_center">
 											<span>ФБФ</span>
 										</div>
-									</div>
+									</a>
 								</div>
 								<div class="row bg-gray">
-									<div class="col-6 col-md-6  outline">
+									<a href="#" class="col-6 col-md-6  outline ptr acolor">
 										<div class="vr_center">
 											<span class="">ФМФ</span>
 										</div>
-									</div>
-									<div class="col-6 col-md-6  outline">
+									</a>
+									<a href="#" class="col-6 col-md-6  outline ptr acolor">
 										<div class="vr_center">   
 											<span>ИИПО</span>
 										</div>
-									</div>
+									</a>
 								</div>
 							</div>
+
 							<div class="col-2 col-md-2">
 							</div>
 							<div class="col-5 col-md-5 vr_center">
 								<div class="row bg-gray">
-									<div class="col-6 col-md-6 outline">
+									<a href="#" class="col-6 col-md-6 outline ptr acolor">
 										<div class="">
 											<span class="">ИПОИТ</span>
 										</div>
-									</div>
-									<div class="col-6 col-md-6 outline">
+									</a>
+									<a href="#" class="col-6 col-md-6 outline ptr acolor">
 										<div class="vr_center">
 											<span>ФБФ</span>
 										</div>
-									</div>
+									</a>
 								</div>
 								<div class="row bg-gray">
-									<div class="col-6 col-md-6 outline">
+									<a href="#" class="col-6 col-md-6 outline ptr acolor">
 										<div class="vr_center">
 											<span class="">ФМФ</span>
 										</div>
-									</div>
-									<div class="col-6 col-md-6 outline">
+									</a>
+									<a href="#" class="col-6 col-md-6 outline ptr acolor">
 										<div class="vr_center">   
 											<span>ИИПО</span>
 										</div>
-									</div>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -338,6 +343,8 @@ else {
 					</div>
 					</div> 
 				</div>
+			</div>
+		</div>
 				
 					<!-- конец контейнера -->
 
@@ -347,11 +354,11 @@ else {
 					<footer class="footer">
 						<div class="row">
 							<div class="col-12 col-md-12">
-								<i class="fa fa-vk" aria-hidden="true"></i>
-								<i class="fa fa-facebook" aria-hidden="true"></i>
-								<i class="fa fa-twitter" aria-hidden="true"></i>
-								<i class="fa fa-instagram" aria-hidden="true"></i>
-								<i class="fa fa-youtube" aria-hidden="true"></i>
+								<a href="https://vk.com/bgpu_akmully" class="icon"><i class="fa fa-vk" aria-hidden="true"></i></a>
+								<a href="https://www.facebook.com/BashGosPed" class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+								<a href="https://twitter.com/bspu" class="icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								<a href="https://www.instagram.com/bgpu/" class="icon"><i class="fa fa-instagram icon_i" aria-hidden="true"></i></a>
+								<a href="https://www.youtube.com/user/bspunews" class="icon"><i class="fa fa-youtube" aria-hidden="true"></i></a>
 								<br>
 								<span>© 2016-2019 <a href=""> БГПУ им. М. Акмуллы</a></span>
 							</div>
@@ -365,6 +372,8 @@ else {
 	</div>
 </div>
 
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/fm.revealator.jquery.min.js"></script>
 	<script src="js/preloader.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"

@@ -66,12 +66,12 @@ a:visited {
 
 .logo_p
     {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         margin-right: 15px;
     }
 
-@media (max-width: 320px) {
+@media (max-width: 319px) {
 .btn {
         display: inline-block;
         margin-bottom: 0;
@@ -115,6 +115,8 @@ a:visited {
 .logo_txt {
     font-size: 1em !important;
 }
+
+
 }
 
 @media (min-width: 320px) {
@@ -130,12 +132,40 @@ a:visited {
 .logo_txt  
     {
         font-size: 1em !important;
+        padding-bottom: 15px; 
     }
 
 .btn_push
     {
         margin-top:5px !important;
     }
+
+.logo {
+    padding-top: 10px !important;
+}
+
+.logo_p {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.push-30 {
+    padding-top: 10px !important;
+    padding-right: 0 !important;
+}
+
+.vr_text span{
+    font-size: 1.25em !important;
+    text-align: center !important;
+    align-items: center !important;
+}
+}
+
+@media (min-width: 387px) {
+.logo_p {
+    margin-left: 0px;
+    margin-right: 15px;
+}
 }
 
 @media (min-width: 425px) {
@@ -144,6 +174,16 @@ a:visited {
     {
         font-size: 1.15em !important;
     }
+.vr_text span{
+    font-size: 1.5em !important;
+    text-align: center !important;
+    align-items: center !important;
+}
+
+.logo_p {
+    margin-left: 0px;
+    margin-right: 15px;
+}
 }
 
 @media (min-width: 576px) {
@@ -153,6 +193,7 @@ a:visited {
     {
         font-size: 1.5em !important;
     }
+
 }
 
 @media (min-width: 768px) {
@@ -166,6 +207,15 @@ a:visited {
     {
         margin-top: 0 !important;
     }
+
+.push-30 {
+    padding-top: 20px !important;
+    padding-right: 0 !important;
+}
+
+.buttonlog {
+    margin-top: 15px;
+}
 }
 
 @media (min-width: 992px) {
@@ -182,6 +232,11 @@ a:visited {
     {
         font-size: 3em !important;
     }
+
+.push-30 {
+    padding-top: 30px !important;
+    padding-right: 0 !important;
+}    
 }
 
 .logo:hover {
@@ -287,11 +342,7 @@ a:visited {
 }
 
 @media (min-width: 321px){
-    .vr_text span{
-        font-size: 1.5em !important;
-        text-align: center !important;
-        align-items: center !important;
-    }
+
 }
 
 
@@ -376,6 +427,7 @@ a:visited {
 
 .bg-gray {
 	background: #F1F5FA;
+
 }
 
 .neponel {
@@ -509,6 +561,9 @@ a:visited {
         border-right: 0px;
         border: 1.25px solid #183884;
         padding: 0px !important;
+        justify-content: center;
+        display: flex;
+        align-items: center;
     }
     .outline {
         display: flex !important;
@@ -570,15 +625,16 @@ a:visited {
 }
 
 @media (max-width: 320px){
-    .col-12>i {
+    .icon {
         font-size: 1.5em !important;
     }
 }
 @media (min-width: 321px){
-    .col-12>i {
+    .icon {
         font-size: 2em !important;
     }
 }
+
 
 .footer i {
     color: #fff;
@@ -770,13 +826,14 @@ a:visited {
   }
 }
 .loader-container {
-  margin-left: 40%;
+  margin-left: 33%;
   width: 80px;
-  height: 50px;
+  height: 40px;
   font-size: 25px;
   line-height: 50px;
   overflow: hidden;
-  text-align: center;
+  text-align: center !important;
+  justify-content: center !important;
 }
 
 @-webkit-keyframes load {
@@ -792,6 +849,8 @@ a:visited {
 }
 
 .loader {
+  text-align: center !important;
+  justify-content: center !important;
   animation-name: load;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -806,7 +865,7 @@ label, input {
     margin: 0 0 0 20px !important;
 } */
 .buttonlog {
-    width: 40% !important;
+    width: 30% !important;
     padding: 5px !important;
     background: #fff !important;
     border: 2px solid #4CAF50 !important;
@@ -819,6 +878,27 @@ label, input {
     transition: ease-in-out 0.5s;
 }
 
+@media(min-width: 320px){
+    .buttonlog {
+
+     }
+}
+
+.acolor {
+    color: #000;
+}
+
+.acolor:hover {
+    color: #fff !important;
+}
+
+.ptr:hover {
+    background: #183884 !important;
+    color: #fff !important;
+    transition: ease-in-out 0.5s;
+}
+
+
 .preloader {
     align-items: center;
   display: flex;
@@ -827,7 +907,7 @@ label, input {
   background: white;
   position: fixed;
   z-index: 1000;
-  transition: 0.7s all;
+  transition: 0.6s all;
   opacity: 1;
   visibility: visible;
 }
