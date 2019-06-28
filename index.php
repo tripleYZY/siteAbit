@@ -68,7 +68,7 @@ if(!isset($_COOKIE['user_id'])) {
 						</div>
 
 						<div class="col-12 col-md-6 head_text flex btn_push">
-							<a href="#" class="btn">
+							<a href="https://abitur.cbias.ru/" class="btn">
 								Информационный ресурс для абитуриентов
 							</a>
 						</div>
@@ -118,7 +118,7 @@ else {
 <div class="container">	
 		<div class="col-md-12 " style="padding: 0 !important">
 				<div class="row list cent ">
-					<div class="col-md-12 yay "  style="margin-top: 25px; margin-bottom: 25px; border: 1.25px solid #183884; padding: 0px !important">
+					<div class="col-md-12 yay revealator-zoomin revealator-delay2 revealator-once"  style="margin-top: 25px; margin-bottom: 25px; border: 1.25px solid #183884; padding: 0px !important">
 
 						<a href="#">
 				<div class="">
@@ -133,10 +133,10 @@ else {
 				</a>
 		</div>
 		
-			<div class="col-md-12 revealator-zoomin revealator-delay2 revealator-once" style="padding: 0 !important"> 
+		<!-- 	<div class="col-md-12 revealator-zoomin revealator-delay2 revealator-once" style="padding: 0 !important"> 
 				<div class="row list cent ">
 					
-					<div class="col-12 col-md-4 bg-gray bor_b">
+					<div class="col-12 col-md-4 bg-gray bor_b" style="border-radius: 0 0 0 20px;">
 						<span id="lines">0</span><span>&nbsp; образовательных программ</span>
 					</div>
 
@@ -144,7 +144,7 @@ else {
 						<span id="lines2">0</span><span>&nbsp; бюджетных мест</span>
 					</div>
 
-					<div class="col-12 col-md-4 bg-gray bor_l1 bor_b">
+					<div class="col-12 col-md-4 bg-gray bor_l1 bor_b" style="border-radius: 0 20px 0 0;">
 						<span>до
               <div class="loader-container">
                 <div class="loader">
@@ -161,6 +161,42 @@ else {
 
 				</div>
 			</div>
+ -->
+
+
+ 			<div class="col-md-12 bg-gray txtok revealator-zoomin revealator-delay2 revealator-once" style="padding: 0 !important">
+ 				<div class="row list cent bg">
+ 					<div class="col-12 col-md-4">
+ 						<span id="lines">0</span><span>&nbsp; образовательных программ</span>
+ 					</div>
+
+ 					<div class="col-12 col-md-4">
+ 						<span id="lines2">0</span><span>&nbsp; бюджетных мест</span>
+					</div>
+
+
+ 					<div class="col-12 col-md-4">
+ 						<span>до
+              <div class="loader-container">
+                <div class="loader">
+                  <span>0%</span>
+                  <span>10%</span>
+                  <span>20%</span>
+                  <span>30%</span>
+                  <span>40%</span>
+                  <span>50%</span>
+                </div>
+              </div>
+               скидки на платное обучение</span>
+
+ 					</div>
+ 					
+ 				</div>
+ 			</div>
+</div>
+
+ 				
+
 
 			<div class="row">
 				<!-- левая граница -->
@@ -169,9 +205,9 @@ else {
 						<!-- контейнер -->
 			<div class="col-md-12">
 
-				<section class="revealator-zoomin revealator-delay2 revealator-once">	<!-- блок 2 -->
+				<section class="revealator-zoomin revealator-delay2 revealator-once ">	<!-- блок 2 -->
 					<div class="row list list_b">
-						<a href="#" class="col-6 col-md-3 bor_b bor_r bg-gray ptr acolor">
+						<a href="#" class="col-6 col-md-3 bor_b bor_r bg-gray ptr acolor borradl">
 							
 							<span>Колледж</span>	
 
@@ -184,9 +220,12 @@ else {
 							<span>Магистратура</span>
 						</a>
 
-						<a href="#" class="col-6 col-md-3 bor_b bor_l bg-gray ptr acolor">
+						
+
+						<a href="#" class="col-6 col-md-3 bor_b bor_l bg-gray ptr acolor borradr">
 							<span>Аспирантура</span>
 						</a>
+						
 					</div>
 
 				</section>
@@ -194,10 +233,10 @@ else {
 
 <!-- #354d83 - фон   #233456 - буквы TEXT V VR -->
 				<section class="revealator-zoomin revealator-delay2 revealator-once">
-					<div class="row" style="padding-top: 10px">
-						<div class="vr_img">
-							<div class="col-md-12 vr_text">
-								<span class="text_align">Виртуальный путеводитель по университету</span>
+					<div class="row">
+						<div class="vr_img borrada fon shirina">
+							<div class="col-md-12 vr_text ">
+								<span class="text_align ">Виртуальный путеводитель по университету</span>
 							</div>
 						</div>
 					</div>
@@ -233,7 +272,7 @@ else {
 								</div>
 							</div>
 
-							<div class="col-2 col-md-2">
+							<div class="col-2 col-md-2 vr2_img">
 							</div>
 							<div class="col-5 col-md-5 vr_center">
 								<div class="row bg-gray">
@@ -272,7 +311,7 @@ else {
 							
 								<div class="col-md-12 inf">
 
-										<span>Контактная ифнормация</span>
+										<span>Контактная информация</span>
 
 								</div>
 
@@ -350,27 +389,35 @@ else {
 
 <!-- правая граница -->
 
-
-					<footer class="footer">
-						<div class="row">
-							<div class="col-12 col-md-12">
-								<a href="https://vk.com/bgpu_akmully" class="icon"><i class="fa fa-vk" aria-hidden="true"></i></a>
-								<a href="https://www.facebook.com/BashGosPed" class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-								<a href="https://twitter.com/bspu" class="icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-								<a href="https://www.instagram.com/bgpu/" class="icon"><i class="fa fa-instagram icon_i" aria-hidden="true"></i></a>
-								<a href="https://www.youtube.com/user/bspunews" class="icon"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-								<br>
-								<span>© 2016-2019 <a href=""> БГПУ им. М. Акмуллы</a></span>
-							</div>
-						</div>
-					</footer>
-
+<?php 
+	include 'footer.php';
+ ?>
 
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+$(document).ready(function(){
+ 
+$(window).scroll(function(){
+if ($(this).scrollTop() > 600) {
+$('.scrollup').fadeIn();
+} else {
+$('.scrollup').fadeOut();
+}
+});
+ 
+$('.scrollup').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+ 
+});
+</script>
 
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/fm.revealator.jquery.min.js"></script>
@@ -406,5 +453,6 @@ else {
     5000
   );
     </script>
+       <a href="#" class="scrollup">Наверх</a>
   </body>
 </html>

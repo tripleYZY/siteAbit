@@ -62,7 +62,7 @@ if(isset($_POST['submit'])){
 			<div class="wrap-login100 ">
 				<div class="login100-form validate-form ">
 					<span class="login100-form-title p-b-10 revealator-zoomin revealator-once">
-						Welcome
+						Согласны?
 					</span>
 			<content>
 	<form method="POST">
@@ -105,7 +105,7 @@ if(isset($_POST['submit'])){
 
 
 		<button name="submit" class="login100-form-btn revealator-zoomin revealator-once">
-							Зарегестрироваться
+							Зарегистрироваться
 						</button>
 	</form>
 </content>

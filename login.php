@@ -61,7 +61,7 @@ if(!isset($_COOKIE['user_id'])) {
 			<div class="wrap-login100">
 				<div class="login100-form validate-form revealator-zoomin revealator-once">
 					<span class="login100-form-title p-b-10">
-						Welcome
+						Узнали?
 					</span>
 			<div>
 					<?php 
