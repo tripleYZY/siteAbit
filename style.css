@@ -103,7 +103,7 @@ a:visited {
 
 .logo_p
     {
-        height: 60px; 
+        height: 60px;
         width: 60px;
         justify-content: center;
         margin-right: 10px;
@@ -135,10 +135,10 @@ a:visited {
         padding-right: 0 !important;
     }
 
-.logo_txt  
+.logo_txt
     {
         font-size: 1em !important;
-        padding-bottom: 15px; 
+        padding-bottom: 15px;
     }
 
 .btn_push
@@ -215,7 +215,7 @@ a:visited {
     text-align: center !important;
     align-items: center !important;
 }
-.logo_txt 
+.logo_txt
     {
         font-size: 2em !important;
     }
@@ -237,7 +237,7 @@ a:visited {
 
 @media (min-width: 992px) {
 
-.logo_txt 
+.logo_txt
     {
         font-size: 2.5em !important;
     }
@@ -253,7 +253,7 @@ a:visited {
 .push-30 {
     padding-top: 30px !important;
     padding-right: 0 !important;
-}    
+}
 }
 
 .logo:hover {
@@ -382,7 +382,7 @@ a:visited {
 
 .vr2_img {
     background: url(vr2.png);
-    background-size: cover; 
+    background-size: cover;
 }
 
 .vr_img span {
@@ -396,7 +396,7 @@ a:visited {
 
     font-weight: bold;
  /*  background-color: rgba(0,0,0,4); !!!!!!FON
-    padding: 10px 30px; */ 
+    padding: 10px 30px; */
 }
 
 
@@ -473,9 +473,32 @@ a:visited {
 .inf {
     font-size: 48px;
     color: #183884;
-    text-align: center;
+    text-align: center !important;
     padding-bottom: 10px;
 
+}
+
+.txtnews {
+  color: #000;
+  text-align: left !important;
+}
+
+.datenews {
+  color: #183884;
+  text-align: right;
+  font-size: 14px;
+}
+
+.left {
+  text-align: left;
+}
+
+.push_30 {
+  margin-top: 30px;
+}
+
+.push_15 {
+  margin-top: 15px;
 }
 
 .fixed_button{
@@ -638,11 +661,11 @@ a:visited {
     align-items: center;
 
     text-align: center;
-    display: flex !important;   
+    display: flex !important;
     margin-bottom: 25px !important;
 }
 
-.vr 
+.vr
 {
 	display: inline-block;
 	border: none;
@@ -728,7 +751,7 @@ a:visited {
 
 .reg_text {
     padding: 7px;
-    background-color: #25e838;  
+    background-color: #25e838;
     border: 1.25px solid #11af21;
     border-style: dashed;
     margin: 15px 0;
@@ -749,7 +772,7 @@ a:visited {
 .myphnumber,
 .myemail,
 .mylogin {
-    padding: 7px; 
+    padding: 7px;
     border: 1.25px solid #11af21;
     margin: 7px 0;
     font-variant: all-petite-caps;
@@ -764,7 +787,7 @@ a:visited {
 .myphnumber2,
 .myemail2,
 .mylogin2 {
-    padding: 7px; 
+    padding: 7px;
     margin: 7px 0;
     font-variant: all-petite-caps;
     font-weight: 600;
@@ -931,7 +954,6 @@ label, input {
     color: #fff !important;
     transition: ease-in-out 0.5s;
 }
-
 
 .preloader {
     align-items: center;

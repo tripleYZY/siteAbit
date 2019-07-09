@@ -4,7 +4,7 @@ $logout = '/index.php?logout=true';
 if (isset($_REQUEST['logout'])){
 	unset($_COOKIE['user_id'], $_COOKIE['username'], $_COOKIE['password']);
 	session_destroy();
-} 
+}
 
 header('Content-type: text/html; charset=utf-8');
 $link = mysqli_connect('localhost', 'root', '', 'test_abit');
@@ -37,7 +37,7 @@ if(!isset($_COOKIE['user_id'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-  <?php 
+  <?php
   		include 'head.php';
    ?>
   <body>
@@ -62,7 +62,7 @@ if(!isset($_COOKIE['user_id'])) {
   					<div class="row">
 		  				<div class="col-12 col-md-6 head_text">
 							<a href="https://bspu.ru/" class="btn btn-white-outline ">
-								<i class="fa fa-university"></i> 
+								<i class="fa fa-university"></i>
 								 Официальный сайт БГПУ им. М.Акмуллы
 							</a>
 						</div>
@@ -80,14 +80,14 @@ if(!isset($_COOKIE['user_id'])) {
 				<div class="col-12 logo logo_pad">
 					<a href="index.php" class="dec_none">
 						<span class="header-block__title logo_txt">
-							<img src="bspu.png" class="logo_p"> 
+							<img src="bspu.png" class="logo_p">
 							Приёмная комиссия БГПУ им. М.Акмуллы
 						</span>
 					</a>
 				</div>
 
 				<div class="col-12 col-md-12 login">
-					
+
 <?php
 	if(empty($_COOKIE['username'])) {
 ?>
@@ -99,7 +99,7 @@ else {
 	?>
 	<div><p  class="padt"><a href="myprofile.php">Мой профиль</a></p></div>
 	<div><p><a href="exit.php">Выйти(<?php echo $_COOKIE['username']; ?>)</a></p><div>
-<?php	
+<?php
 }
 ?>
 </div>
@@ -107,15 +107,15 @@ else {
 		</div></div>
 	</header>
 
-	<?php 
+	<?php
 		if(isset ($_REQUEST['reg'])) {
 			echo '<div class="col-md-12 reg"><span class="reg_text">Ваш аккаунт зарегестрирован</span>
 </div>';
 		}
 	 ?>
-	
 
-<div class="container">	
+
+<div class="container">
 		<div class="col-md-12 " style="padding: 0 !important">
 				<div class="row list cent ">
 					<div class="col-md-12 yay revealator-zoomin revealator-delay2 revealator-once"  style="margin-top: 25px; margin-bottom: 25px; border: 1.25px solid #183884; padding: 0px !important">
@@ -124,7 +124,7 @@ else {
 				<div class="">
 					<div class="col-md-12 yaycol " style="">
 						<div class="center ">
-					
+
 						<span>ХОД ПРИЕМА 2019</span>
 						</div>
 					</div>
@@ -132,10 +132,10 @@ else {
 			</div>
 				</a>
 		</div>
-		
-		<!-- 	<div class="col-md-12 revealator-zoomin revealator-delay2 revealator-once" style="padding: 0 !important"> 
+
+		<!-- 	<div class="col-md-12 revealator-zoomin revealator-delay2 revealator-once" style="padding: 0 !important">
 				<div class="row list cent ">
-					
+
 					<div class="col-12 col-md-4 bg-gray bor_b" style="border-radius: 0 0 0 20px;">
 						<span id="lines">0</span><span>&nbsp; образовательных программ</span>
 					</div>
@@ -190,12 +190,12 @@ else {
                скидки на платное обучение</span>
 
  					</div>
- 					
+
  				</div>
  			</div>
 </div>
 
- 				
+
 
 
 			<div class="row">
@@ -208,8 +208,8 @@ else {
 				<section class="revealator-zoomin revealator-delay2 revealator-once ">	<!-- блок 2 -->
 					<div class="row list list_b">
 						<a href="#" class="col-6 col-md-3 bor_b bor_r bg-gray ptr acolor borradl">
-							
-							<span>Колледж</span>	
+
+							<span>Колледж</span>
 
 						</a>
 						<a href="#" class="col-6 col-md-3 bor_b bor_l bg-gray ptr acolor">
@@ -220,12 +220,12 @@ else {
 							<span>Магистратура</span>
 						</a>
 
-						
+
 
 						<a href="#" class="col-6 col-md-3 bor_b bor_l bg-gray ptr acolor borradr">
 							<span>Аспирантура</span>
 						</a>
-						
+
 					</div>
 
 				</section>
@@ -234,7 +234,7 @@ else {
 <!-- #354d83 - фон   #233456 - буквы TEXT V VR -->
 				<section class="revealator-zoomin revealator-delay2 revealator-once">
 					<div class="row">
-						<div class="vr_img borrada fon shirina">
+						<div class="vr_img borrada fon shirina push_30">
 							<div class="col-md-12 vr_text ">
 								<span class="text_align ">Виртуальный путеводитель по университету</span>
 							</div>
@@ -243,7 +243,7 @@ else {
 				</section>
 
 					<section class="vr_pad">  <!-- блок 3 -->
-							
+
 						<div class="row">
 							<div class="col-5 col-md-5 vr_center ">
 								<div class="row bg-gray ">
@@ -265,7 +265,7 @@ else {
 										</div>
 									</a>
 									<a href="#" class="col-6 col-md-6  outline ptr acolor">
-										<div class="vr_center">   
+										<div class="vr_center">
 											<span>ИИПО</span>
 										</div>
 									</a>
@@ -294,7 +294,7 @@ else {
 										</div>
 									</a>
 									<a href="#" class="col-6 col-md-6 outline ptr acolor">
-										<div class="vr_center">   
+										<div class="vr_center">
 											<span>ИИПО</span>
 										</div>
 									</a>
@@ -306,10 +306,10 @@ else {
 
 						<!-- CONTACT INFA -->
 
-					<section>
+					<section >
 						<div class="row">
-							
-								<div class="col-md-12 inf">
+
+								<div class="col-md-12 inf push_30">
 
 										<span>Контактная информация</span>
 
@@ -321,7 +321,7 @@ else {
 					<section>
 						<div class="row">
 
-							<div class="col-md-12" style="padding: 0px !important;">
+							<div class="col-md-12 push_15" style="padding: 0px !important;">
 							 	<div id="map"></div>
 							</div>
 						</div>
@@ -329,7 +329,7 @@ else {
 					</section>
 
 					<!-- NEWS -->
-					<section>
+					<section class="push_30">
 						<div class="row">
 							<div class="col-md-12 inf">
 								<span>Наши новости</span>
@@ -337,16 +337,40 @@ else {
 						</div>
 					</section>
 
-					<section>
-						
+					<section class="push_15">
+
 					<div class="row">
-						<div class="col-sm-6 inf">
-							<span>1 блок</span>
+						<div class="col-sm-3 txtnews">
+							<h4 class="left">Прошел конкурс</h4>
+							<span>на выявление лучшего студента нашего университета</span>
+								<div class="datenews">
+									<span>9 июля 2019</span>
+								</div>
 						</div>
 
-						<div class="col-sm-6 inf">
-							<span>2 блок</span>
+						<div class="col-sm-1">
 						</div>
+
+						<div class="col-sm-4 txtnews">
+							<h4 class="left">Объявлен победитель</h4>
+							<span>всероссийской олимпиады по китайскому языку</span>
+							<div class="datenews">
+								<span>9 июля 2019</span>
+							</div>
+						</div>
+
+						<div class="col-sm-1">
+						</div>
+
+						<div class="col-sm-3 txtnews">
+							<h4 class="left"=>XVI Европейский психологический конгресс</h4>
+							<span>Студентка БГПУ им. М. Акмуллы стала участницей форума «Восток»
+</span>
+							<div class="datenews">
+								<span>9 июля 2019</span>
+							</div>
+						</div>
+
 					</div>
 
 
@@ -362,9 +386,9 @@ else {
 					</section>
 
 					<section>
-						
+
 					<div class="row">
-						<div class="col-sm-6 inf">
+						<div class="col-sm-6 inf ">
 							<span>2</span>
 						</div>
 
@@ -380,16 +404,16 @@ else {
 					</section>
 
 					</div>
-					</div> 
+					</div>
 				</div>
 			</div>
 		</div>
-				
+
 					<!-- конец контейнера -->
 
 <!-- правая граница -->
 
-<?php 
+<?php
 	include 'footer.php';
  ?>
 
@@ -402,7 +426,7 @@ else {
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript">
 $(document).ready(function(){
- 
+
 $(window).scroll(function(){
 if ($(this).scrollTop() > 600) {
 $('.scrollup').fadeIn();
@@ -410,12 +434,12 @@ $('.scrollup').fadeIn();
 $('.scrollup').fadeOut();
 }
 });
- 
+
 $('.scrollup').click(function(){
 $("html, body").animate({ scrollTop: 0 }, 600);
 return false;
 });
- 
+
 });
 </script>
 
